@@ -268,7 +268,7 @@ const Main = ({ isLogin, userCards, cardsId }) => {
         {
           headers: {
             'Content-Type': 'application/json', //
-            Cookie: token,
+            authorization: token,
           },
           // withCredentials: true,
         }
