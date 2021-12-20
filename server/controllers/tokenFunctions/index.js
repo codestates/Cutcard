@@ -11,12 +11,12 @@ module.exports = {
       accessToken, //
       {
         httpOnly: true, //
-        // sameSite: 'None'
+        sameSite: 'None',
       }
     );
   },
   isAuthorized: (req, res) => {
-    const authorization = req.headers['cookie'];
+    const authorization = req.headers.authorization;
     if (!authorization) {
       return res.status(401).json({ data: null, message: 'access token not provided!' });
     } else {
