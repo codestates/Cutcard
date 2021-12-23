@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Calendar from './Calendar';
-import View, { Item } from './View';
+import View from './View';
 import Submit from './Submit';
-import { newdumy } from '../../dummyData';
 import axios from 'axios';
 import { useBeforeunload } from 'react-beforeunload';
 import Modal from '../Modal';
@@ -75,17 +74,6 @@ const Main = ({
   const [showModal, setShowModal] = useState(false);
 
   useBeforeunload((event) => event.preventDefault());
-
-  let targetMonthBalance = 0;
-  transaction.forEach((el) => {
-    if (transaction.isIncome) {
-      targetMonthBalance -= el.price;
-    } else targetMonthBalance -= el.price;
-  });
-
-  const [thisMonthBalance, setthisMonthBalance] = useState(0);
-
-  // const lestMonthCardUsage = cardPrice.reduce((acc, cur) => acc + cur.price, 0);
 
   const [pickDate, setPickDate] = useState(new Date());
 
@@ -414,7 +402,7 @@ const Main = ({
 
   const inOutDate = {};
 
-  transaction.map((el) => {
+  transaction.forEach((el) => {
     //inOut data 생성
     const date = `${el.year}.${el.month}.${el.day}`;
     if (inOutDate[date] === undefined) {

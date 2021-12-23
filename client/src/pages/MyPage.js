@@ -27,11 +27,10 @@ function MyPage({
   setUserCards,
 }) {
   const [nickname, setNickname] = useState('');
-
   const [password, setPassword] = useState('');
   const [passwordCheck, setPasswordCheck] = useState('');
-
   const [selected, setSelected] = useState('');
+
   const notSelectedCards = cardsList.filter(
     (obj) => userCards.map((obj) => obj.cardId).includes(obj.id) === false,
   );

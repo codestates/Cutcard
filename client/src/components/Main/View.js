@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import { SmallButton } from '../Button';
 
@@ -307,7 +306,6 @@ const DetailList = (props) => {
     modifyStateHandler,
     buttonStateHandler,
     contentDeleter,
-    mainState,
   } = props;
   const { inComes, inComesTotal, outComes, outComesTotal } = detail;
   return (
@@ -364,7 +362,6 @@ const View = (props) => {
     mainStateHandler,
     mainState,
     data,
-    transaction,
     modifyStateHandler,
     modifyState,
     buttonStateHandler,

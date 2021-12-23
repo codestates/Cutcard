@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import { PriceInput } from '../Input';
 import { SmallButton } from '../Button';
@@ -62,17 +61,7 @@ export const InputDate = styled.div`
     outline: 1px solid #7c8986;
   }
 `;
-const wrap = styled.div`
-  width: ${(props) => props.width || '40px'};
-  height: ${(props) => props.height || '40px'};
-  top: ${(props) => props.top || '0px'};
-  left: ${(props) => props.left || '0px'};
-  right: ${(props) => props.right || '0px'};
-  bottom: ${(props) => props.bottom || '0px'};
-  position: ${(props) => props.position || '40px'};
-  color: ${(props) => props.color || 'none'};
-  margin: ${(props) => props.margin || '0'};
-`;
+
 const RequestMessage = styled.div`
   box-sizing: border-box;
   padding-left: 15px;
@@ -93,15 +82,7 @@ const AddInCome = (props) => {
     inComeCategorys,
     category,
     categoryHandler,
-    price,
-    priceHandler,
-    inputResetHandler,
-    submitHandler,
-    contentModifiyer,
-    buttonModifyState,
-    requestMessage,
   } = props;
-  console.log(requestMessage);
   return (
     <>
       <InputContainer>
@@ -132,14 +113,7 @@ const AddOutCome = (props) => {
     cashHandler,
     card,
     cardHandler,
-    price,
-    priceHandler,
-    inputResetHandler,
     userCards,
-    submitHandler,
-    contentModifiyer,
-    buttonModifyState,
-    requestMessage,
   } = props;
   const cardsList = userCards.map((el) => el.cardName);
 

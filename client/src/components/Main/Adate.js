@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 
 const AdateContainer = styled.div`
@@ -104,12 +103,14 @@ const DateMaker = (props) => {
         )
       }
       <StateContainer>
-        {inOutDate[`${year}.${month}.${date}`] === 1 || inOutDate[`${year}.${month}.${date}`] === 3 ? ( //
+        {inOutDate[`${year}.${month}.${date}`] === 1 ||
+        inOutDate[`${year}.${month}.${date}`] === 3 ? ( //
           <IncomeStateTrue></IncomeStateTrue>
         ) : (
           <IncomeState />
         )}
-        {inOutDate[`${year}.${month}.${date}`] === 2 || inOutDate[`${year}.${month}.${date}`] === 3 ? ( //
+        {inOutDate[`${year}.${month}.${date}`] === 2 ||
+        inOutDate[`${year}.${month}.${date}`] === 3 ? ( //
           <OutcomeStateTrue></OutcomeStateTrue>
         ) : (
           <OutcomeState />
@@ -127,8 +128,6 @@ const Adate = (props) => {
     index,
     dateHandler,
     inOutDate,
-    mainStateHandler,
-    setModifyState,
     modifyStateHandler,
     buttonStateHandler,
   } = props;
