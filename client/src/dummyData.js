@@ -202,7 +202,7 @@ export const newdumy = {
       month: 12,
       day: 16,
       category: '기타',
-      price: 3333,
+      price: 3000,
       isIncome: false,
       outcomeIsCash: false,
       userId: 1,
