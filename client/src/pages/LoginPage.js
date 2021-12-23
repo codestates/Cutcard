@@ -37,7 +37,7 @@ function LoginPage({
 
     axios
       .post(
-        `${process.env.REACT_APP_API_URL}users/login`,
+        `${process.env.REACT_APP_API_URL}/users/login`,
         {
           email: email,
           password: password,

@@ -108,7 +108,7 @@ const Main = ({
 
   //!
 
-  const url = `${process.env.REACT_APP_API_URL}transaction/`;
+  const url = `${process.env.REACT_APP_API_URL}/transaction/`;
   //!
 
   const categoryList = {

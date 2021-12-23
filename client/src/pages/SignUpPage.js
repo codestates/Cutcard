@@ -58,7 +58,7 @@ function SignUpPage({ cardsList }) {
     setIsEmailBtnClick(true);
     axios
       .post(
-        `${process.env.REACT_APP_API_URL}users/exists`,
+        `${process.env.REACT_APP_API_URL}/users/exists`,
         { email: email },
         {
           headers: {
@@ -122,7 +122,7 @@ function SignUpPage({ cardsList }) {
   const onSignUpClick = () => {
     axios
       .post(
-        `${process.env.REACT_APP_API_URL}users/signup`,
+        `${process.env.REACT_APP_API_URL}/users/signup`,
         {
           email: email,
           password: password,

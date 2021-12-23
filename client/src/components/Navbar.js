@@ -68,7 +68,7 @@ function Navbar({
 }) {
   const onLogoutClick = () => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}users/logout`)
+      .get(`${process.env.REACT_APP_API_URL}/users/logout`)
       .then((res) => {
         setAccessToken('');
         setUserCards([]);
@@ -81,7 +81,7 @@ function Navbar({
   };
 
   const onMyPageClick = () => {
-    axios.get(`${process.env.REACT_APP_API_URL}users/userinfo`, {
+    axios.get(`${process.env.REACT_APP_API_URL}/users/userinfo`, {
       headers: {
         Authorization: `Bearer ${accessToken}`,
         'Content-Type': 'application/json',

@@ -111,7 +111,7 @@ function MyPage({
     if (password === passwordCheck) {
       await axios
         .patch(
-          `${process.env.REACT_APP_API_URL}users/userinfo`,
+          `${process.env.REACT_APP_API_URL}/users/userinfo`,
           {
             nickname: nickname,
             password: password,
@@ -141,7 +141,7 @@ function MyPage({
 
   const onSignOutClick = () => {
     axios
-      .delete(`${process.env.REACT_APP_API_URL}users/userinfo`, {
+      .delete(`${process.env.REACT_APP_API_URL}/users/userinfo`, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
           'Content-Type': 'application/json',
