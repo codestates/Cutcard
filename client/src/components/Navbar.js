@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
 import axios from 'axios';
 
 const Header = styled.header`
@@ -30,6 +29,10 @@ const Logo = styled.button`
   &:hover {
     cursor: pointer;
   }
+
+  @media only screen and (max-width: 910px) {
+    background-color: rgba(0, 0, 0, 0);
+  }
 `;
 
 const Menu = styled.button`
@@ -48,14 +51,25 @@ const Menu = styled.button`
     font-weight: 700;
     color: #7c8986;
   }
+
+  @media only screen and (max-width: 910px) {
+    background-color: rgba(0, 0, 0, 0);
+  }
 `;
 
-function Navbar({ isLogin, setIsLogin, accessToken, setAccessToken, setUserCards, setUserInfo, setTransaction }) {
+function Navbar({
+  isLogin,
+  setIsLogin,
+  accessToken,
+  setAccessToken,
+  setUserCards,
+  setUserInfo,
+  setTransaction,
+}) {
   const onLogoutClick = () => {
     axios
-      .get('http://localhost:4000/users/logout')
+      .get(`${process.env.REACT_APP_API_URL}users/logout`)
       .then((res) => {
-        console.log(res);
         setAccessToken('');
         setUserCards([]);
         setUserInfo({});
@@ -67,14 +81,12 @@ function Navbar({ isLogin, setIsLogin, accessToken, setAccessToken, setUserCards
   };
 
   const onMyPageClick = () => {
-    axios
-      .get('http://localhost:4000/users/userinfo', {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-          'Content-Type': 'application/json',
-        },
-      })
-      .then((res) => console.log(res));
+    axios.get(`${process.env.REACT_APP_API_URL}users/userinfo`, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        'Content-Type': 'application/json',
+      },
+    });
   };
 
   return (
@@ -82,9 +94,6 @@ function Navbar({ isLogin, setIsLogin, accessToken, setAccessToken, setUserCards
       <Nav>
         <Link to="/main">
           <Logo>Cut Card</Logo>
-        </Link>
-        <Link to="/about">
-          <Menu paddingTop="0px">소개</Menu>
         </Link>
       </Nav>
       {isLogin ? (

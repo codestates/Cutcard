@@ -1,23 +1,20 @@
-const express = require("express");
-const cors = require("cors");
-const cookieParser = require("cookie-parser");
-const indexRouter = require("./routes");
+const express = require('express');
+const cors = require('cors');
+const cookieParser = require('cookie-parser');
+const indexRouter = require('./routes');
+const fs = require('fs');
+const https = require('https');
 
 const app = express();
-const port = 4000;
+const port = 80;
 
-app.use(
-  cors({
-    credentials: true,
-    methods: "GET,PATCH,POST,DELETE,OPTIONS",
-  })
-);
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use("/", indexRouter);
+app.use('/', indexRouter);
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+app.get('/', (req, res) => {
+  res.send('Hello World!');
 });
 
 app.listen(port, () => {

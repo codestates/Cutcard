@@ -8,31 +8,30 @@ export const ButtonStyle = styled.button`
   margin: ${(props) => props.margin || "0"};
   bottom: ${(props) => props.bottom || "0"};
   position: ${(props) => props.position || "none"};
-
   box-sizing: border-box;
   outline: 0;
   border: ${(props) => props.border || 0};
   background-color: ${(props) => props.background || "#97BFB4"};
-  font-size: 16px;
+  font-size: ${(props) => props.fontSize || "16px"};
   font-weight: 700;
-  border-radius: 5px;
+  border-radius: ${(props) => props.radius || "5px"};
   display: block;
-  /* text-decoration: none; */
+  opacity: ${(props) => props.opacity || "100%"};
 
   &:hover {
-    cursor: pointer;
-    opacity: 80%;
-    /* text-decoration: none; */
+    cursor: ${(props) => props.cursor || "pointer"};
+    opacity: ${(props) => props.hoverOpacity || "80%"};
   }
 
   &:active {
     cursor: pointer;
     opacity: 95%;
-    /* text-decoration: none; */
   }
 
-  &:visited {
-    /* text-decoration: none; */
+  @media only screen and (max-width: 910px) {
+    color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
+    border: rgba(0, 0, 0, 0.1);
   }
 `;
 
@@ -73,6 +72,10 @@ export function BigButton({
   border,
   margin,
   onClick,
+  disabled,
+  opacity,
+  hoverOpacity,
+  cursor,
 }) {
   return (
     <ButtonStyle
@@ -83,6 +86,10 @@ export function BigButton({
       border={border}
       margin={margin}
       onClick={onClick}
+      disabled={disabled}
+      opacity={opacity}
+      hoverOpacity={hoverOpacity}
+      cursor={cursor}
     >
       {text}
     </ButtonStyle>

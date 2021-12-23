@@ -39,6 +39,10 @@ const InputStyle = styled.input`
   &:focus {
     outline: 1px solid #7c8986;
   }
+
+  @media only screen and (max-width: 910px) {
+    background-color: rgba(0, 0, 0, 0);
+  }
 `;
 
 const EmailExist = styled.button`
@@ -79,7 +83,24 @@ export const Notification = styled.div`
 `;
 
 export function EmailInput(props) {
-  const { label, type, placeholder, readOnly, width, height, margin, marginLabel, value, onChange, onFocus, onClick, disabled, opacity, hoverOpacity, cursor } = props;
+  const {
+    label,
+    type,
+    placeholder,
+    readOnly,
+    width,
+    height,
+    margin,
+    marginLabel,
+    value,
+    onChange,
+    onFocus,
+    onClick,
+    disabled,
+    opacity,
+    hoverOpacity,
+    cursor,
+  } = props;
 
   return (
     <>
@@ -88,7 +109,7 @@ export function EmailInput(props) {
         <InputStyle
           type={type}
           placeholder={placeholder}
-          spellCheck="false" // always
+          spellCheck="false"
           readOnly={readOnly}
           width={width}
           height={height}
@@ -97,7 +118,13 @@ export function EmailInput(props) {
           onChange={onChange}
           onFocus={onFocus}
         />
-        <EmailExist onClick={onClick} disabled={disabled} opacity={opacity} hoverOpacity={hoverOpacity} cursor={cursor}>
+        <EmailExist
+          onClick={onClick}
+          disabled={disabled}
+          opacity={opacity}
+          hoverOpacity={hoverOpacity}
+          cursor={cursor}
+        >
           중복 확인
         </EmailExist>
       </EmailContainer>
@@ -106,7 +133,22 @@ export function EmailInput(props) {
 }
 
 export function Input(props) {
-  const { label, type, placeholder, readOnly, width, height, value, margin, marginLabel, onChange, min, max, position, bottom } = props;
+  const {
+    label,
+    type,
+    placeholder,
+    readOnly,
+    width,
+    height,
+    value,
+    margin,
+    marginLabel,
+    onChange,
+    min,
+    max,
+    position,
+    bottom,
+  } = props;
 
   return (
     <>
@@ -116,7 +158,7 @@ export function Input(props) {
         min={min}
         max={max}
         placeholder={placeholder}
-        spellCheck="false" // always
+        spellCheck="false"
         readOnly={readOnly}
         width={width}
         height={height}
@@ -137,7 +179,7 @@ export function LoginInput({ onChange }) {
       <InputStyle
         type="text"
         placeholder="이메일을 입력해주세요"
-        spellCheck="false" // always
+        spellCheck="false"
         height="50px"
         margin="auto"
         onChange={onChange}
@@ -153,7 +195,7 @@ export function PasswordInput({ onChange, onKeyPress }) {
       <InputStyle
         type="password"
         placeholder="비밀번호를 입력해주세요"
-        spellCheck="false" // always
+        spellCheck="false"
         height="50px"
         margin="0 auto"
         onChange={onChange}
@@ -164,14 +206,27 @@ export function PasswordInput({ onChange, onKeyPress }) {
 }
 
 export const PriceInput = (props) => {
-  const { type, placeholder, readOnly, width, height, value, margin, onChange, min, max, position, bottom } = props;
+  const {
+    type,
+    placeholder,
+    readOnly,
+    width,
+    height,
+    value,
+    margin,
+    onChange,
+    min,
+    max,
+    position,
+    bottom,
+  } = props;
   return (
     <InputStyle
       type={type}
       min={min}
       max={max}
       placeholder={placeholder}
-      spellCheck="false" // always
+      spellCheck="false"
       readOnly={readOnly}
       width={width}
       height={height}

@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Adate from './Adate';
 
@@ -38,6 +37,10 @@ export const Arrow = styled.button`
   &:hover {
     cursor: pointer;
     opacity: 80%;
+  }
+
+  @media only screen and (max-width: 910px) {
+    background-color: rgba(0, 0, 0, 0);
   }
 `;
 export const Today = styled.button``;
@@ -92,11 +95,6 @@ const Calendar = (props) => {
   } = props;
   //!
 
-  // console.log(`달력 데이터 테스트`);
-  // console.log(`${data}`);
-  // console.dir(data);
-  // console.log(data);
-
   //!
   //! calendar array generate
   const preLastInfo = new Date(targetYear, targetMonth - 1, 0);
@@ -136,7 +134,7 @@ const Calendar = (props) => {
           <Nav>
             <Arrow onClick={() => moveMonthHandler(-1)}>&lt;</Arrow>
             <YearMonth>{`${targetYear}년 ${targetMonth}월`}</YearMonth>
-            {/* <Today>Today</Today> */}
+
             <Arrow onClick={() => moveMonthHandler(1)}>&gt;</Arrow>
           </Nav>
         </Head>
@@ -149,7 +147,7 @@ const Calendar = (props) => {
               <DaySun key={index}>{day}</DaySun>
             ) : (
               <Day key={index}>{day}</Day>
-            )
+            ),
           )}
         </Days>
 
