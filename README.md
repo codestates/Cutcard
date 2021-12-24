@@ -1,4 +1,5 @@
 # Cutcard
+<img width="350" alt="스크린샷 2021-12-14 오후 1 05 31" src="https://user-images.githubusercontent.com/87600541/147310487-3abcd1ee-b20c-44d3-aef9-3af914577176.png">
 
 월급은 통장을 스칠 뿐...
 
@@ -29,37 +30,29 @@
 
 
 # Tech Stack
-<details>
-<summary>Front</summary>
-  
-- JS
-- React
-- React Router
-- AXIOS
-- Styled Components
-</details>
+### Front
+<img src="https://img.shields.io/badge/JavaScript-gray?style=flat-square&logo=JavaScript&logoColor=F7DF1E"/></a> &nbsp;
+<img src="https://img.shields.io/badge/React-gray?style=flat-square&logo=React&logoColor=61DBFB"/></a> &nbsp;
+<img src="https://img.shields.io/badge/React-Router-gray?style=flat-square&logo=React-Router&logoColor=#CA4245"/></a> &nbsp;
+<img src="https://img.shields.io/badge/Axios-gray?style=flat-square&logo=Axios&logoColor=white"/></a> &nbsp;
+<img src="https://img.shields.io/badge/Styled-Components-gray?style=flat-square&logo=Styled-Components&logoColor=DB7093"/></a>
 
-<details>
-<summary>Back</summary>
-  
-- Node
-- Express
-- MySQL
-- Sequelize
-- JWT
-</details>
 
-<details>
-<summary>Deployment</summary>
+### Back
+<img src="https://img.shields.io/badge/Node.js-lightgray?style=flat-square&logo=Node.js&logoColor=#339933"/></a> &nbsp;
+<img src="https://img.shields.io/badge/Express-lightgray?style=flat-square&logo=Express&logoColor=#000000"/></a> &nbsp;
+<img src="https://img.shields.io/badge/MySQL-lightgray?style=flat-square&logo=MySQL&logoColor=#4479A1"/></a> &nbsp;
+<img src="https://img.shields.io/badge/Sequelize-lightgray?style=flat-square&logo=Sequelize&logoColor=#52B0E7"/></a> &nbsp;
+<img src="https://img.shields.io/badge/JWT-lightgray?style=flat-square&logo=JSON Web Tokens&logoColor=#000000"/></a> &nbsp;
 
-- S3
-- EC2
-- RDS
-- Route 53
-- Cloudfront!
-- Load Balancer
-</details>
-
+### Deployment
+<img src="https://img.shields.io/badge/S3-gray?style=flat-square&logo=Amazon AWS&logoColor=##232F3E"/></a> &nbsp;
+<img src="https://img.shields.io/badge/EC2-gray?style=flat-square&logo=Amazon AWS&logoColor=#232F3E"/></a> &nbsp;
+<img src="https://img.shields.io/badge/RDS-gray?style=flat-square&logo=Amazon AWS&logoColor=#232F3E"/></a> &nbsp;
+<img src="https://img.shields.io/badge/Route 53-gray?style=flat-square&logo=Amazon AWS&logoColor=#232F3E"/></a> &nbsp;
+<img src="https://img.shields.io/badge/CloudFront-gray?style=flat-square&logo=Amazon AWS&logoColor=#232F3E"/></a> &nbsp;
+<img src="https://img.shields.io/badge/Load Balancer-gray?style=flat-square&logo=Amazon AWS&logoColor=#232F3E"/></a> &nbsp;
+---
 <img src="https://user-images.githubusercontent.com/85062881/147306795-7ffad51b-c2c6-48c3-9697-b0c0efa8b059.png" width='900'>
 
 # Code Columbus
